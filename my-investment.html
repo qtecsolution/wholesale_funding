@@ -1,11 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Investments</title>
+  <!-- fontawesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- TAILWIND CSS -->
+  <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
-    <h1>my investment</h1>
+
+<body class="font-sans">
+  <div class="px-4 py-6 bg-gray-50">
+    <!-- Header -->
+    <div class="flex items-center mb-4 relative">
+      <!-- Back Button -->
+      <button class="p-2 bg-gray-200 rounded-full hover:bg-gray-300">
+        <i class="fas fa-arrow-left text-gray-600"></i>
+      </button>
+
+      <!-- Title -->
+      <h1 class="text-xl font-semibold text-gray-800 mx-auto">My Investments</h1>
+
+      <!-- Search Icon and Search Bar -->
+      <div class="absolute right-0 flex items-center space-x-2">
+        <!-- Search Icon -->
+        <button id="search-icon" class="p-2 bg-gray-200 rounded-full hover:bg-gray-300 h-8 w-8 flex items-center justify-center">
+          <i class="fas fa-search text-gray-600"></i>
+        </button>
+
+        <!-- Search Bar (Initially hidden) -->
+        <div id="search-bar" class="hidden relative">
+          <input type="text" placeholder="Search..." class="p-2 border border-gray-300 rounded-lg shadow-sm outline-none focus:border-primary transition duration-200">
+          <button id="close-search" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600">
+            <i class="fas fa-times text-gray-600"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Status Filter -->
+    <div class="mb-4">
+      <h2 class="text-lg font-semibold text-gray-800 mb-2">Filter by Status</h2>
+      <div class="flex space-x-4">
+        <button class="bg-primary text-white px-4 py-2 rounded hover:bg-red-600 shadow-md" onclick="filterByStatus('active')">Active</button>
+        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 shadow-md" onclick="filterByStatus('completed')">Completed</button>
+        <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 shadow-md" onclick="filterByStatus('pending')">Pending</button>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div id="investment-cards" class="space-y-6">
+      <!-- Investment Card 1 -->
+      <div class="investment-card flex items-start bg-white p-4 rounded-lg shadow-md" data-status="active">
+        <img src="https://placehold.jp/150x150.png" alt="Investment 1" class="w-24 h-24 object-cover rounded-lg mr-4">
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold mb-2">Investment - 1</h2>
+          <p class="text-secondary font-bold text-xl">30,000 <span class="text-sm text-gray-500">/Unit</span></p>
+          <div class="flex items-center text-sm text-gray-500 mt-2 space-x-6">
+            <span>🌟 15%</span>
+            <span>📅 6 months</span>
+          </div>
+        </div>
+        <button class="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary">View Details</button>
+      </div>
+
+      <!-- Investment Card 2 -->
+      <div class="investment-card flex items-start bg-white p-4 rounded-lg shadow-md" data-status="completed">
+        <img src="https://placehold.jp/150x150.png" alt="Investment 2" class="w-24 h-24 object-cover rounded-lg mr-4">
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold mb-2">Investment - 2</h2>
+          <p class="text-secondary font-bold text-xl">25,000 <span class="text-sm text-gray-500">/Unit</span></p>
+          <div class="flex items-center text-sm text-gray-500 mt-2 space-x-6">
+            <span>🌟 12%</span>
+            <span>📅 3 months</span>
+          </div>
+        </div>
+        <button class="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary">View Details</button>
+      </div>
+
+      <!-- Investment Card 3 -->
+      <div class="investment-card flex items-start bg-white p-4 rounded-lg shadow-md" data-status="pending">
+        <img src="https://placehold.jp/150x150.png" alt="Investment 3" class="w-24 h-24 object-cover rounded-lg mr-4">
+        <div class="flex-1">
+          <h2 class="text-lg font-semibold mb-2">Investment - 3</h2>
+          <p class="text-secondary font-bold text-xl">50,000 <span class="text-sm text-gray-500">/Unit</span></p>
+          <div class="flex items-center text-sm text-gray-500 mt-2 space-x-6">
+            <span>🌟 10%</span>
+            <span>📅 4 months</span>
+          </div>
+        </div>
+        <button class="bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary">View Details</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="h-20"></div>
+  <!-- Bottom Navigation -->
+  <div class="fixed bottom-0 left-0 right-0 border border-t border-gray-100 bg-white shadow-md p-4 flex justify-around">
+    <!-- Home Button -->
+    <a href="index.html" class="flex flex-col items-center text-gray-600">
+      <i class="fas fa-home h-6 w-6"></i>
+      <span class="text-sm">Home</span>
+    </a>
+
+    <!-- Projects Button -->
+    <a href="projects.html" class="flex flex-col items-center text-gray-600">
+      <i class="fas fa-project-diagram h-6 w-6"></i>
+      <span class="text-sm">Projects</span>
+    </a>
+
+    <!-- My Investments Button with Active Class -->
+    <a href="my-investments.html" class="flex flex-col items-center text-primary hover:text-primary active">
+      <i class="fas fa-hand-holding-usd h-6 w-6"></i>
+      <span class="text-sm">My Investments</span>
+    </a>
+
+    <!-- More Button -->
+    <a href="/more.html" class="flex flex-col items-center text-gray-600 hover:text-primary">
+      <i class="fas fa-ellipsis-h h-6 w-6"></i>
+      <span class="text-sm">More</span>
+    </a>
+  </div>
+
+  <script>
+    const searchIcon = document.getElementById("search-icon");
+    const searchBar = document.getElementById("search-bar");
+    const closeSearch = document.getElementById("close-search");
+
+    // Toggle search bar visibility when search icon is clicked
+    searchIcon.addEventListener("click", () => {
+      searchBar.classList.toggle("hidden");
+    });
+
+    // Hide search bar when close icon is clicked
+    closeSearch.addEventListener("click", () => {
+      searchBar.classList.add("hidden");
+    });
+
+    // Hide search bar when clicking outside of it
+    document.addEventListener("click", (event) => {
+      if (!searchBar.contains(event.target) && !searchIcon.contains(event.target)) {
+        searchBar.classList.add("hidden");
+      }
+    });
+
+    // Filter function for investment cards based on status
+    function filterByStatus(status) {
+      const investmentCards = document.querySelectorAll('.investment-card');
+      investmentCards.forEach(card => {
+        const cardStatus = card.getAttribute('data-status');
+        if (status === 'all' || cardStatus === status) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
 </body>
+
 </html>

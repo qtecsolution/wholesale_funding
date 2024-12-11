@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details </title>
+    <!-- TAILWIND CSS  -->
+    <!-- fontawesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- google font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+
+    <body class="bg-gray-50">
+
+     <div class="container mx-auto">
+           <!-- Header Section -->
+           <div class="flex items-center mb-4 relative py-3">
+            <!-- Back Button -->
+            <a href="index.html" class="p-2 bg-gray-200 rounded-full hover:bg-gray-300 h-10 w-10 flex items-center justify-center">
+              <i class="fas fa-arrow-left text-gray-600"></i>
+            </a>
+      
+            <!-- Title -->
+            <h1 class="text-xl font-semibold text-gray-800 mx-auto">My Investments</h1>
+      
+            
+          </div>
+
+        <!-- Image Section -->
+        <div class="p-4">
+            <img src="https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg" alt="Fishing Project" class="w-full h-64 object-cover rounded-lg shadow">
+        </div>
+
+        <!-- Overview Section -->
+        <div class="p-4 bg-white rounded-lg shadow">
+            <h2 class="text-2xl font-semibold text-gray-800">Mixed Fish Project - 11</h2>
+            <p class="text-primary text-xl font-bold my-2">৳45,000/unit</p>
+            <div class="grid grid-cols-2 gap-4 text-sm text-gray-700">
+                <div>
+                    <p><i class="fas fa-percentage text-secondary"></i> Return: <span class="font-bold">16%</span></p>
+                    <p><i class="fas fa-calendar-alt text-secondary"></i> Duration: <span class="font-bold">7
+                            months</span></p>
+                </div>
+                <div>
+                    <p><i class="fas fa-map-marker-alt text-secondary"></i> Location: <span class="font-bold">Subarnachar,
+                            Noakhali</span></p>
+                    <p><i class="fas fa-seedling text-secondary"></i> Return Type: <span class="font-bold">Long</span></p>
+                </div>
+            </div>
+            <div class="mt-4">
+                <p class="text-lg font-semibold text-gray-800">Total Return: <span class="text-primary">৳52,200</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="flex justify-around mt-4 bg-white py-3 shadow rounded-lg">
+            <button
+                class="flex-1 text-center py-2 border-b-4 border-secondary font-semibold text-secondary">Overview</button>
+            <button
+                class="flex-1 text-center py-2 border-b-4 border-transparent text-gray-600 hover:text-secondary hover:border-secondary">Profit
+                Statement</button>
+            <button
+                class="flex-1 text-center py-2 border-b-4 border-transparent text-gray-600 hover:text-secondary hover:border-secondary">About</button>
+            <button
+                class="flex-1 text-center py-2 border-b-4 border-transparent text-gray-600 hover:text-secondary hover:border-secondary">FAQ</button>
+        </div>
+
+        <!-- Profit Statement Section -->
+        <div class="mt-4 p-4 bg-white rounded-lg shadow">
+            <h2 class="text-xl font-semibold text-gray-800">Profit Statement</h2>
+            <table class="w-full mt-4 border-collapse">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-700">
+                        <th class="py-3 px-4 text-left">Month</th>
+                        <th class="py-3 px-4 text-left">Net Profit</th>
+                        <th class="py-3 px-4 text-left">ROI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="py-2 px-4">7 months</td>
+                        <td class="py-2 px-4">৳7,200</td>
+                        <td class="py-2 px-4">16%</td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 px-4">Return on Capital</td>
+                        <td class="py-2 px-4">৳7,200</td>
+                        <td class="py-2 px-4">16%</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="py-2 px-4 font-semibold text-gray-800">Total</td>
+                        <td class="py-2 px-4 font-semibold text-primary">৳52,200</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Booking Section -->
+        <div class="mt-4 p-4 bg-white rounded-lg shadow">
+            <div class="text-sm text-gray-700">
+                <p>Maximum: <span class="font-semibold">10 Units(s)/ Booking</span></p>
+                <p>Remaining: <span class="font-semibold">73 Units(s)</span></p>
+            </div>
+            <div class="flex items-center mt-4">
+                <button class="px-4 py-2 bg-gray-200 rounded-l-md text-xl font-bold hover:bg-gray-300">-</button>
+                <input type="text" value="1" class="w-12 h-[43px] text-center border-y border-gray-300 outline-none">
+                <button class="px-4 py-2 bg-gray-200 rounded-r-md text-xl font-bold hover:bg-gray-300">+</button>
+                <span class="ml-4 text-primary text-lg font-semibold">৳45,000</span>
+            </div>
+            <button class="mt-4 w-full py-3 bg-secondary text-white font-bold rounded-lg">Book
+                Now</button>
+        </div>
+
+        <!-- About This Project Section -->
+        <div class="mt-4 p-4 bg-white rounded-lg shadow">
+            <h2 class="text-xl font-semibold text-gray-800">About This Project</h2>
+            <p class="mt-2 text-gray-700 text-sm leading-relaxed">
+                Aquaculture in Bangladesh has been one of the main factors contributing to the expansion of the nation's
+                fisheries industry. We rank as the world's fifth-largest producer of aquaculture today. According to the
+                Feed Industries Association of Bangladesh, the country's annual need for animal feed is roughly 6.4
+                million tonnes, of which 60% is consumed by poultry, 25% by fish, and 15% by cattle feed. Today,
+                practically all of the demand is met by local feed mills. The fisheries industry contributes 3.69% of
+                the country's GDP and 22.60% of the agricultural GDP, making it a crucial sector for the country's
+                economy.
+            </p>
+            <p class="mt-2 text-gray-700 text-sm leading-relaxed">
+                For the people who are interested in the mixed fish project, we are offering them a unit value of BDT
+                45,000 with 16% returns in 7 months.
+            </p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="p-4 bg-white rounded-lg shadow-md mt-5">
+            <!-- FAQ Header -->
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">FAQ</h2>
+
+            <!-- FAQ Item 1 -->
+            <div class="border-b border-gray-200 py-4">
+                <button
+                    class="flex justify-between items-center w-full text-left text-gray-800 font-medium focus:outline-none"
+                    onclick="toggleFaq(this)">
+                    <span>Can you tell us about AgriCare?</span>
+                    <svg class="w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div
+                    class="faq-content mt-2 hidden text-gray-600 text-sm leading-relaxed transition-opacity duration-300 ease-in-out">
+                    AgriCare is a platform focused on providing investment opportunities in agriculture projects,
+                    ensuring sustainable returns for investors while supporting the growth of the agricultural sector.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="border-b border-gray-200 py-4">
+                <button
+                    class="flex justify-between items-center w-full text-left text-gray-800 font-medium focus:outline-none"
+                    onclick="toggleFaq(this)">
+                    <span>What is the return on investment?</span>
+                    <svg class="w-5 h-5 text-gray-600 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div
+                    class="faq-content mt-2 hidden text-gray-600 text-sm leading-relaxed transition-opacity duration-300 ease-in-out">
+                    The return on investment for this project is 16% over 7 months, calculated based on the unit cost
+                    and the projected net profit.
+                </div>
+            </div>
+        </div>
+     </div>
+
+        <script>
+            // Function to toggle FAQ visibility and rotate arrow
+            function toggleFaq(button) {
+                const content = button.nextElementSibling; // Target the associated FAQ content
+                const arrow = button.querySelector("svg"); // Target the arrow icon
+
+                if (content.classList.contains("hidden")) {
+                    // Show the FAQ content
+                    content.classList.remove("hidden");
+                    content.classList.add("block", "opacity-100");
+                    arrow.classList.add("rotate-180");
+                } else {
+                    // Hide the FAQ content
+                    content.classList.add("hidden");
+                    content.classList.remove("block", "opacity-100");
+                    arrow.classList.remove("rotate-180");
+                }
+            }
+        </script>
+
+        <div class="h-20"></div>
+        <!-- Bottom Navigation -->
+        <div
+            class="fixed bottom-0 left-0 right-0 border border-t border-gray-100 bg-white shadow-md p-4 flex justify-around">
+            <!-- Home Button with Active Class -->
+            <a href="index.html" class="flex flex-col items-center  text-gray-600  active">
+                <i class="fas fa-home h-6 w-6"></i>
+                <span class="text-sm">Home</span>
+            </a>
+
+            <!-- Projects Button -->
+            <a href="projects.html" class="flex flex-col items-center text-gray-600 hover:text-primary">
+                <i class="fas fa-project-diagram h-6 w-6"></i>
+                <span class="text-sm">Projects</span>
+            </a>
+
+            <!-- My Investments Button -->
+            <a href="my-investment.html" class="flex flex-col items-center text-gray-600 hover:text-primary">
+                <i class="fas fa-hand-holding-usd h-6 w-6"></i>
+                <span class="text-sm">My Investments</span>
+            </a>
+
+            <!-- More Button -->
+            <a href="more.html" class="flex flex-col items-center text-gray-600 hover:text-primary"
+                onclick="window.location.href='more.html'">
+                <i class="fas fa-ellipsis-h h-6 w-6"></i>
+                <span class="text-sm">More</span>
+            </a>
+        </div>
+
+
+    </body>
+</body>
+
+</html>
