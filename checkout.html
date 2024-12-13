@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHOLESALE FUNDING || Checkout </title>
+    <!-- TAILWIND CSS  -->
+    <!-- fontawesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- google font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+    <div class="bg-gray-50  p-4">
+        <div class="container mx-auto">
+            <!-- Header -->
+            <div class="bg-white p-4 mb-4  shadow-md flex items-center">
+                <a href="/project-details.html" class="text-gray-800 text-lg">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1 class="ml-4 text-xl font-semibold text-gray-800">My Cart</h1>
+            </div>
+            <div class="p-4  bg-white">
+                <!-- Header -->
+                <div class="flex items-center space-x-2 mb-4">
+                    <button class="text-gray-600">
+                        <!-- Back Icon -->
+                        &larr;
+                    </button>
+                    <h1 class="text-lg font-semibold">Checkout</h1>
+                </div>
+
+                <!-- Total Investment Section -->
+                <div class="mb-4 p-4 bg-gray-50 rounded-md border">
+                    <h2 class="text-red-500 font-medium">Total Investment</h2>
+                    <div class="mt-2 text-gray-700 space-y-1">
+                        <p class="flex justify-between">
+                            <span>Mixed Fish Project - 11 X 1</span>
+                            <span class="font-medium">৳45,000</span>
+                        </p>
+                        <p class="flex justify-between font-bold">
+                            <span>Total</span>
+                            <span class="text-primary">৳45,000</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bank Info Section -->
+                <div class="mb-4 p-4 border border-primary rounded-md">
+                    <h3 class="font-semibold text-primary mb-2">Our Bank Info</h3>
+                    <p class="text-sm text-gray-600">
+                        We kindly request that the payment be made to the following account:
+                    </p>
+                    <ul class="mt-2 text-sm text-gray-700 space-y-1">
+                        <li>Account Name: <span class="font-semibold">AGRICARE GLOBAL LTD</span></li>
+                        <li>Account No: <span class="font-semibold">1253936054001</span></li>
+                        <li>Branch: <span class="font-semibold">Karwan Bazar</span></li>
+                        <li>Routing Number: <span class="font-semibold">225262531</span></li>
+                        <li>Bank: <span class="font-semibold">The City Bank Ltd</span></li>
+                    </ul>
+                    <p class="text-xs mt-3 text-gray-500">
+                        * ব্যাংক ডিপোজিট স্লিপে অর্ডার নাম্বার টি লিখতে হবে
+                    </p>
+                </div>
+
+                <!-- User Bank Info Section -->
+                <div class="p-4 border rounded-md">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="font-semibold text-gray-700">Bank Info</h3>
+                        <button class="text-primary text-sm font-medium">Change</button>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">
+                        Return on Investment will be disbursed to the given account. Change the
+                        account info before booking if required.
+                    </p>
+                    <!-- Input Fields -->
+                    <div class="space-y-3">
+                        <div>
+                            <label for="bank-name" class="block text-sm font-medium text-gray-700">
+                                Name of the Bank
+                            </label>
+                            <input type="text" id="bank-name"
+                                class="w-full mt-2 rounded-lg border border-gray-300 focus:border-secondary transition duration-300 outline-none py-3 ps-3"
+                                value="Mutual Trust Bank Limited" />
+                        </div>
+                        <div>
+                            <label for="branch-name" class="block text-sm font-medium text-gray-700">
+                                Name of the Branch
+                            </label>
+                            <input type="text" id="branch-name"
+                                class="w-full mt-2 rounded-lg border border-gray-300 focus:border-secondary transition duration-300 outline-none py-3 ps-3"
+                                value="Baraipara" />
+                        </div>
+                        <div>
+                            <label for="account-holder" class="block text-sm font-medium text-gray-700">
+                                Name of the Account Holder
+                            </label>
+                            <input type="text" id="account-holder"
+                                class="w-full mt-2 rounded-lg border border-gray-300 focus:border-secondary transition duration-300 outline-none py-3 ps-3"
+                                value="Md Imran Hossain" />
+                        </div>
+                        <div>
+                            <label for="account-number" class="block text-sm font-medium text-gray-700">
+                                Account Number
+                            </label>
+                            <input type="text" id="account-number"
+                                class="w-full mt-2 rounded-lg border border-gray-300 focus:border-secondary transition duration-300 outline-none py-3 ps-3"
+                                value="0830310026488" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Place Order Button -->
+                <button
+                    class="w-full mt-6 py-3 bg-secondary text-white font-semibold rounded-md shadow">
+                    Place Order
+                </button>
+
+            </div>
+
+
+          
+
+            <div class="h-20"></div>
+            <!-- Bottom Navigation -->
+            <div
+                class="fixed bottom-0 left-0 right-0 border border-t border-gray-100 bg-white shadow-md p-4 flex justify-around">
+                <!-- Home Button with Active Class -->
+                <a href="index.html" class="flex flex-col items-center  text-gray-600 hover:text-primary  active">
+                    <i class="fas fa-home h-6 w-6"></i>
+                    <span class="text-sm">Home</span>
+                </a>
+
+                <!-- Projects Button -->
+                <a href="projects.html" class="flex flex-col items-center text-gray-600 hover:text-primary">
+                    <i class="fas fa-project-diagram h-6 w-6"></i>
+                    <span class="text-sm">Projects</span>
+                </a>
+
+                <!-- My Investments Button -->
+                <a href="my-investment.html" class="flex flex-col items-center text-gray-600 hover:text-primary">
+                    <i class="fas fa-hand-holding-usd h-6 w-6"></i>
+                    <span class="text-sm">My Investments</span>
+                </a>
+
+                <!-- More Button -->
+                <a href="more.html" class="flex flex-col items-center  text-gray-600  hover:text-primary">
+                    <i class="fas fa-ellipsis-h h-6 w-6"></i>
+                    <span class="text-sm">More</span>
+                </a>
+            </div>
+
+
+</body>
+
+</html>
